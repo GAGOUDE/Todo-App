@@ -31,7 +31,9 @@ const TodoList = ({todos, setTodos, setEditTodo}) => {
   return (
     <div>
         {todos.map((todo) => (
-            <li className='list-item' key={todo.id}>
+            <li 
+                className={`list-item ${todo.completed ? "complete-list" : ""}`} 
+                key={todo.id}>
                 {/* <input 
                     type="text" 
                     value={todo.title}
